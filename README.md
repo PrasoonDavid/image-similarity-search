@@ -3,6 +3,11 @@
 This is a simple FastAPI server that serves images through an API.
 
 ## Setup
+0. Setup environment
+```bash
+python3 -m venv imageSolServerEnv
+source imageSolServerEnv/bin/activate
+```
 
 1. Install dependencies:
 ```bash
