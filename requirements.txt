@@ -1,0 +1,4 @@
+fastapi==0.70.0
+uvicorn==0.15.0
+chromadb
+python-multipart==0.0.5
