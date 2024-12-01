@@ -21,3 +21,11 @@ async def search_embeddings(query: str, n_results: int = 5):
         return {"status": "success", "result": result}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+@router.get("/load-images/")
+async def load_image():
+    try:
+        result = image_service.store_embeddings_algolia()
+        return {"status": "success", "result": result}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
