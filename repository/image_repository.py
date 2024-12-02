@@ -19,9 +19,9 @@ class ImageRepository:
         """Delete embeddings by IDs"""
         return self.collection.delete(ids=ids)
     
-    def add_embedding(self,product_id, product_name, embedding):
+    def add_embedding(self,product_id, metadatas, embedding):
         self.collection.add(
             ids=[product_id],  # Unique identifier for the product
             embeddings=[embedding],
-            metadatas=[{"name": product_name}]  # Additional metadata
+            metadatas=metadatas # Additional metadata
             )
